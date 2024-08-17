@@ -1,0 +1,10 @@
+necessário instalar quando se trabalha com typescript e nodejs
+    npm i -D @types/node
+
+converte o código para javascript e o executa de forma automática. Recomenda-se usar somente em homologação
+    npm i tsx -D
+
+roda o código com tsx
+    npx tsx nome_do_arquivo
+
+npm i eslint @rocketseat/eslint-config -D
