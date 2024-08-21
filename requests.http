@@ -1,2 +1,20 @@
-GET http://localhost:3333/hello
+GET http://localhost:3333/transactions
+Content-Type: application/json
+###
+
+GET http://localhost:3333/transactions/cf1c7d1a-59ff-4a12-9b7c-d1fad7a135e6
+Content-Type: application/json
+###
+
+POST http://localhost:3333/transactions
+Content-Type: application/json
+
+{
+    "amount": 12.56,
+    "title": "mark-II",
+    "type": "credit"
+}
+
+###
+GET http://localhost:3333/transactions/summary
 Content-Type: application/json

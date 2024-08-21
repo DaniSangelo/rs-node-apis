@@ -1,20 +1,17 @@
 import fastify from 'fastify'
-import { knex } from './database'
-import crypto from 'node:crypto'
 import { env } from './env'
+import { transactionRoutes } from './routes/transactions'
+import fastifyCookie from '@fastify/cookie'
 
 const app = fastify()
+app.register(fastifyCookie)
+// middleware global no escopo da aplicação. Todas as rotas da aplicação ativarão esse middleware
+// app.addHook('preHandler', async (request, reply)=> {
+//   console.log(`${request.method} ${request.url}`)
+// });
 
-app.get('/hello', async () => {
-  const transaction = await knex('transactions')
-    .insert({
-      id: crypto.randomUUID(),
-      title: 'Mark 1',
-      amount: 1000.6,
-      // session_id: crypto.randomUUID(),
-    })
-    .returning('*')
-  return transaction
+app.register(transactionRoutes, {
+  prefix: 'transactions',
 })
 
 app

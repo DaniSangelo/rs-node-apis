@@ -8,3 +8,9 @@ roda o código com tsx
     npx tsx nome_do_arquivo
 
 npm i eslint @rocketseat/eslint-config -D
+
+criar uma migration
+    npm run knex -- migrate:make add_type_column_in_transactions
+
+aplicar uma migrations
+    npm run knex -- migrate:latest
