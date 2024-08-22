@@ -145,3 +145,4 @@ dist
 
 db/
 .env
+.env.test

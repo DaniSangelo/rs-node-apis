@@ -69,7 +69,7 @@ export async function transactionRoutes(app: FastifyInstance) {
         .where('id', id)
         .where('session_id', sessionId)
         .first()
-      return transaction
+      return { transaction }
     },
   )
 
@@ -84,7 +84,7 @@ export async function transactionRoutes(app: FastifyInstance) {
         .where('session_id', sessionId)
         .sum('amount', { as: 'amount' })
         .first()
-      return summary
+      return { summary }
     },
   )
 }

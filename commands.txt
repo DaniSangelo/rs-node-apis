@@ -14,3 +14,16 @@ criar uma migration
 
 aplicar uma migrations
     npm run knex -- migrate:latest
+
+biblioteca para testes
+    npm i vitest -D
+
+executa os testes
+    npx vitest
+
+é uma biblioteca usada para executar a aplicação sem necessariamente rodar o servidor. Por isso foi necessário separar a
+aplicação, colocando-a em um arquivo app, do servidor, colocando-o em um arquivo server
+    npm i supertest -D
+
+instalação necessária em typescript, pois a biblioteca supertest foi construída 100% em JS
+    npm i -D @types/supertest
