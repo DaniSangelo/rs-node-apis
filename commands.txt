@@ -27,3 +27,6 @@ aplicação, colocando-a em um arquivo app, do servidor, colocando-o em um arqui
 
 instalação necessária em typescript, pois a biblioteca supertest foi construída 100% em JS
     npm i -D @types/supertest
+
+é uma ferramenta para fazer o build do código typescript, convertendo-o para JS 
+    npm i -D tsup
